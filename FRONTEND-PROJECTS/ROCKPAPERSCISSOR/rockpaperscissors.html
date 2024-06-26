@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK-PAPER-SCISSOR</title>
     <style>
+         .answer{
+            height:30px;
+            width:auto;
+            background-color: aliceblue;
+        }
         body{
             background-image:url(./jon-tyson-GpiqJ8Po2g0-unsplash.jpg);
             background-size: cover;
@@ -19,6 +24,7 @@
         button{
             margin:100px;
         }
+       
     </style>
 </head>
 <body>
@@ -28,17 +34,19 @@
         let aa;
         if(a>=0 && a<=1/3)
         {
-            aa='rock';
-            alert('tie');
+            
+            document.querySelector('.answer').innerHTML='tie';
         }
         else if(a>1/3 && a<=2/3)
         {
-            aa='paper';
-            alert('computer win , your choice is rock and computer choice ' + `${aa}`);
+            
+            document.querySelector('.answer').innerHTML='computer win , your choice is rock and computer choice paper';
+            
         }
         else{
             aa='scissor';
-            alert('you win , your choice is rock and computer choice ' +`${aa}`);
+            document.querySelector('.answer').innerHTML='you win , your choice is rock and computer choice scissor';
+            
         } 
         "><img src="./rock.png"></button>
     <button onclick="
@@ -46,17 +54,17 @@
         let bb;
         if(b>=0 && b<=1/3)
         {
-            bb='rock';
-            alert('tie');
+            document.querySelector('.answer').innerHTML='you win , your choice is paper and computer choice rock';
+            
         }
         else if(b>1/3 && b<=2/3)
         {
-            bb='paper';
-            alert('computer win , your choice is paper and computer choice '+ `${bb}`);
+            document.querySelector('.answer').innerHTML='tie';
         }
         else{
-            bb='scissor';
-            alert('you win , your choice is paper and computer choice '+ `${bb}`);
+           
+            document.querySelector('.answer').innerHTML='computer win , your choice is paper and computer choice scissor';
+            
         } 
     
     
@@ -66,19 +74,22 @@
         let cc;
         if(c>=0 && c<=1/3)
         {
-            cc='rock';
-            alert('tie');
+            
+            document.querySelector('.answer').innerHTML='computer win , your choice is scissor and computer choice rock';
+            
         }
         else if(c>1/3 && c<=2/3)
         {
-            cc='paper';
-            alert('computer win , your choice is scissor and computer choice '+ `${cc}`);
+            
+            document.querySelector('.answer').innerHTML='you win , your choice is scissor and computer choice paper';
         }
         else{
-            aa='scissor';
-            alert('you win , your choice is scissor and computer choice '+ `${cc}`);
+            document.querySelector('.answer').innerHTML='tie';
         } 
     
     "><img src="./scissor.png"></button>
+    
+        <div class="answer">The answer</div>
+    
 </body>
 </html>
